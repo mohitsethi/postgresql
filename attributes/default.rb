@@ -94,11 +94,11 @@ when "debian"
     default['postgresql']['server']['packages'] = ["postgresql-9.1"]
     default['postgresql']['contrib']['packages'] = ["postgresql-contrib-9.1"]
   else
-    default['postgresql']['version'] = "9.4"
-    default['postgresql']['dir'] = "/etc/postgresql/9.4/main"
-    default['postgresql']['client']['packages'] = ["postgresql-client-9.4", "libpq-dev"]
-    default['postgresql']['server']['packages'] = ["postgresql-9.4"]
-    default['postgresql']['contrib']['packages'] = ["postgresql-contrib-9.4"]
+    default['postgresql']['version'] = "9.5"
+    default['postgresql']['dir'] = "/etc/postgresql/9.5/main"
+    default['postgresql']['client']['packages'] = ["postgresql-client-9.5", "libpq-dev"]
+    default['postgresql']['server']['packages'] = ["postgresql-9.5"]
+    default['postgresql']['contrib']['packages'] = ["postgresql-contrib-9.5"]
   end
 
   case
@@ -133,12 +133,12 @@ when "ubuntu"
     default['postgresql']['server']['packages'] = ["postgresql-9.1"]
     default['postgresql']['contrib']['packages'] = ["postgresql-contrib-9.1"]
   else
-    default['postgresql']['version'] = "9.3"
-    default['postgresql']['dir'] = "/etc/postgresql/9.3/main"
+    default['postgresql']['version'] = "9.5"
+    default['postgresql']['dir'] = "/etc/postgresql/9.5/main"
     default['postgresql']['server']['service_name'] = "postgresql"
-    default['postgresql']['client']['packages'] = ["postgresql-client-9.3", "libpq-dev"]
-    default['postgresql']['server']['packages'] = ["postgresql-9.3"]
-    default['postgresql']['contrib']['packages'] = ["postgresql-contrib-9.3"]
+    default['postgresql']['client']['packages'] = ["postgresql-client-9.5", "libpq-dev"]
+    default['postgresql']['server']['packages'] = ["postgresql-9.5"]
+    default['postgresql']['contrib']['packages'] = ["postgresql-contrib-9.5"]
   end
 
 when "fedora"
@@ -204,7 +204,7 @@ when "opensuse"
   default['postgresql']['dir'] = "/var/lib/pgsql/data"
 
   if node['platform_version'].to_f == 13.2
-    default['postgresql']['version'] = '9.3'
+    default['postgresql']['version'] = '9.5'
     default['postgresql']['client']['packages'] = ['postgresql93', 'postgresql93-devel']
     default['postgresql']['server']['packages'] = ['postgresql93-server']
     default['postgresql']['contrib']['packages'] = ['postgresql93-contrib']
